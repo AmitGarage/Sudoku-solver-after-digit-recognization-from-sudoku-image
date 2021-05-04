@@ -1,4 +1,5 @@
 # Sudoku-solver-after-digit-recognization-from-sudoku-image
+
 Sudoku will be extracted from image and digits to be recognized for further solving sudoku
 
 - Trained a CNN model on MNIST dataset for digit recognizer and achived an accuracy of 97.87 % .
@@ -18,7 +19,7 @@ Sudoku will be extracted from image and digits to be recognized for further solv
 - nn.Conv2d(1,20,kernel_size=5)
   - max_pool2d(,2)
   - relu
-- Conv2d(20,40,kernel_size=5)
+- nn.Conv2d(20,40,kernel_size=5)
   - nn.Dropout2d()
   - max_pool2d(,2)
   - relu
