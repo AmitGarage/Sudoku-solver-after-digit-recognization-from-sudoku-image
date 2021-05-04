@@ -12,3 +12,17 @@ Sudoku will be extracted from image and digits to be recognized for further solv
 - Cropped images were used detect digit after border removal.
 - Boxes which were blank and needs to be predicated were given 0 as digit.
 - Used backtracking to solve sudoku.
+
+***CNN Model used for training***
+
+- nn.Conv2d(1,20,kernel_size=5)
+  - max_pool2d(,2)
+  - relu
+- Conv2d(20,40,kernel_size=5)
+  - nn.Dropout2d()
+  - max_pool2d(,2)
+  - relu
+- nn.Linear(640,120)
+- dropout
+- nn.Linear(120,10)
+- log_softmax
