@@ -1,14 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
-
-
-# In[2]:
-
 
 Sudoku = np.array([[0, 5, 0, 0, 0, 0, 0, 7, 0],
        [3, 0, 2, 0, 0, 7, 5, 0, 0],
@@ -20,16 +13,7 @@ Sudoku = np.array([[0, 5, 0, 0, 0, 0, 0, 7, 0],
        [0, 0, 4, 9, 0, 0, 1, 0, 3],
        [0, 2, 0, 0, 0, 0, 0, 4, 0]])
 
-
-# In[3]:
-
-
-Sudoku
-
-
-# In[4]:
-
-
+# Function to check zero place in sudoku
 def zero_check( Sudoku ) :
     height , width = Sudoku.shape
     for i in range(height) :
@@ -39,23 +23,12 @@ def zero_check( Sudoku ) :
                 return (i,j)
     return None
 
+#zero_check( Sudoku ) 
 
-# In[5]:
+#print(Sudoku[:,0])
+#np.any(Sudoku[0]==7)
 
-
-zero_check( Sudoku ) 
-
-
-# In[6]:
-
-
-print(Sudoku[:,0])
-np.any(Sudoku[0]==7)
-
-
-# In[7]:
-
-
+# Function to backtrack to solve sudoku
 def backtracking(Sudoku , expected_digit , position) :
     x , y = position
     height , width = Sudoku.shape
@@ -78,10 +51,7 @@ def backtracking(Sudoku , expected_digit , position) :
                 return False
     return True
 
-
-# In[8]:
-
-
+# Function to solve sudoku
 def Sudoku_solution( Sudoku ) :
     empty_cell = zero_check( Sudoku )
     if not empty_cell :
@@ -98,16 +68,5 @@ def Sudoku_solution( Sudoku ) :
             Sudoku[x][y] = 0
     return False
 
-
-# In[9]:
-
-
 Sudoku_solution( Sudoku )
 print(Sudoku)
-
-
-# In[ ]:
-
-
-
-
