@@ -28,4 +28,12 @@ Sudoku will be extracted from image and digits to be recognized for further solv
 - nn.Linear(120,10)
 - log_softmax
 
-![Alt text](AmitGarage/Sudoku-solver-after-digit-recognization-from-sudoku-image/sudoku2.jpeg?raw=true "Image after masking and finding grids coordinates")
+Image after masking and finding grids coordinates
+<p align="center">
+  <img src="/Sudoku3.jpeg" width="350" title="Image after masking and finding grids coordinates">
+</p>
+
+Image after suduko grid was cropped out from orignal image
+<p align="center">
+  <img src="/Sudoku2.jpeg" width="350" title="Image after suduko grid was cropped out from orignal image">
+</p>
